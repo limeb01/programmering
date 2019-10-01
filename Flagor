@@ -1,0 +1,42 @@
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+public class javaflaga extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        StackPane sverigeflaga = new StackPane();
+        Group sweden = new Group();
+        sverigeflaga.getChildren().add(sweden);
+
+        Rectangle flag = new Rectangle(1000, 600);
+
+        flag.setFill(Color.BLUE);
+
+        Rectangle rectangel = new Rectangle(300, 0, 100, 600);
+
+        rectangel.setFill(Color.YELLOW);
+
+        Rectangle rectangel2 = new Rectangle(0, 250, 1000, 100);
+
+        rectangel2.setFill(Color.YELLOW);
+
+        sweden.getChildren().addAll(flag, rectangel, rectangel2);
+
+        Scene sverige = new Scene(sverigeflaga);
+
+      primaryStage.setScene(sverige);
+      primaryStage.show();
+
+    }
+}
